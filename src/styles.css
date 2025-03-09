@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Nunito';
+    src: url('/assets/fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
+}
+
 body {
+    font-family: 'Nunito', sans-serif;
     background-color: aliceblue;
     color: var(--dark);
 }
