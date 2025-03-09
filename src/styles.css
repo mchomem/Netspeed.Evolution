@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: aliceblue;
+    color: var(--dark);
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid var(--secondary-blue) !important;
+    box-shadow: 0px 0px 0px 1px var(--secondary-blue) !important;
+}
+
+:root {
+    --primary-blue: #0085d3;
+    --secondary-blue: #255c99;
+    --light-blue: #7EA3CC;
+    --primary-dark-blue: #264160;
+    --dark: #262626;
+
+    --ns-blue: #0077B9;
+    --ns-green: #7DB62D;
+    --ns-orange: #EF8105;
+    --ns-navy: #01384E;
+}

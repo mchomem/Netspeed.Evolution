@@ -1,0 +1,63 @@
+.card {
+}
+.card.strengths {
+    border: 2px solid var(--strengths-color);
+}
+.card.opportunities {
+    border: 2px solid var(--opportunities-color);
+}
+.card.weaknesses {
+    border: 2px solid var(--weaknesses-color);
+}
+.card.threats {
+    border: 2px solid var(--threats-color);
+}
+
+.card.strengths .card-header {
+    background-color: var(--strengths-color);
+}
+.card.opportunities .card-header {
+    background-color:var(--opportunities-color);
+}
+.card.weaknesses .card-header {
+    background-color:var(--weaknesses-color);
+}
+.card.threats .card-header {
+    background-color:var(--threats-color);
+}
+
+.card.strengths {
+    background-color: var(--strengths-bg);
+}
+.card.opportunities {
+    background-color:var(--opportunities-bg);
+}
+.card.weaknesses {
+    background-color:var(--weaknesses-bg);
+}
+.card.threats {
+    background-color:var(--threats-bg);
+}
+
+.card-header {
+    border: none;
+    background-color: var(--secondary-blue);
+    color: white;
+}
+
+input.form-control {
+    background-color: transparent;
+    border: 1px solid darkgray;
+}
+
+:host {
+    --strengths-color: #05a86a;
+    --opportunities-color: #2389b1;
+    --weaknesses-color: #bb1c3e;
+    --threats-color: #a38227;
+
+    --strengths-bg: #f4fff4;
+    --opportunities-bg: #f4faff;
+    --weaknesses-bg: #fff5f4;
+    --threats-bg: #fffaf0;
+}
