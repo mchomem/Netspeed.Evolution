@@ -1,6 +1,46 @@
-<div class="container text-center">
-    <h2 class="mt-4">HOME</h2>
+<div class="container">
 
-    <h3 class="mt-3">Aqui poderia ter informações sobre as <b>Tasks</b></h3>
-    <h3>e gráficos sobre o andamento dos <b>planos de ação</b></h3>
+    <div class="text-center">
+        <h2 class="mt-4">HOME</h2>
+        <h3 class="mt-3">Aqui poderia ter informações sobre as <b>Tasks</b></h3>
+        <h3>e gráficos sobre o andamento dos <b>planos de ação</b></h3>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 80%;">Tarefa</th>
+                        <th style="width: 20%;">Situação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for(task of tasks; track task.id) {
+                    <tr>
+                        <td>{{task.name}}</td>
+                        <td>{{task.state}}</td>
+                    </tr>
+                    }
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">Gráfico 1</div>
+                <div class="card-body"></div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">Gráfico 2</div>
+                <div class="card-body"></div>
+            </div>
+        </div>
+    </div>
 </div>
