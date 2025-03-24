@@ -1,0 +1,48 @@
+
+.strengths {
+    background-color: var(--strengths-bg);
+    border-radius: 30px 0 0 0;
+}
+.strengths.bordered {
+    border-bottom: 1px solid var(--ns-navy);
+    border-right: 1px solid var(--ns-navy);
+}
+
+.opportunities {
+    background-color: var(--opportunities-bg);
+    border-radius: 0 30px 0 0;
+}
+.opportunities.bordered {
+    border-bottom: 1px solid var(--ns-navy);
+    border-left: 1px solid var(--ns-navy);
+}
+
+.weaknesses {
+    background-color: var(--weaknesses-bg);
+    border-radius: 0 0 0 30px;
+}
+.weaknesses.bordered {
+    border-top: 1px solid var(--ns-navy);
+    border-right: 1px solid var(--ns-navy);
+}
+
+.threats {
+    background-color: var(--threats-bg);
+    border-radius: 0 0 30px 0;
+}
+.threats.bordered {
+    border-top: 1px solid var(--ns-navy);
+    border-left: 1px solid var(--ns-navy);
+}
+
+:host {
+    --strengths-color: #f4f8f0;
+    --opportunities-color: #f4faff;
+    --weaknesses-color: #fff5f4;
+    --threats-color: #fffaf0;
+
+    --strengths-bg: #7DB62D;
+    --opportunities-bg: #117fb9;
+    --weaknesses-bg: #ca2c5c;
+    --threats-bg: #df8116;
+}

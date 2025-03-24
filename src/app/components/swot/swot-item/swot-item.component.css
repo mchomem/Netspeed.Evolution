@@ -1,0 +1,33 @@
+:host {
+    input[type="text"] {
+        outline: none;
+        border: none;
+        border-radius: 0;
+        box-shadow: none !important;
+        background-color: transparent;
+        color: var(--ns-navy);
+    }
+    input[type="text"]::placeholder {
+        color: #01384ebd;
+    }
+
+    .item-area {
+        background-color: #ffffffbb;
+        padding: .5rem .5rem .5rem .75rem;
+    }
+
+    .btn-sm {
+        width: 32px;
+        height: 32px;
+    }
+
+    .btn-outline-red {
+        border: 2px solid var(--ns-red);
+        color: var(--ns-red);
+        transition: .3s;
+    }
+        .btn-outline-red:hover {
+            background-color: var(--ns-red);
+            color: white;
+        }
+}

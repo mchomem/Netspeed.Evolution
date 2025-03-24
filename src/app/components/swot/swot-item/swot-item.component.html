@@ -1,0 +1,32 @@
+@if (inputSwotItens.length) {
+    @for (item of inputSwotItens; track item) {
+        <div class="item-area rounded-pill col mb-2">
+            <label [for]="item.id" class="label-text-input d-flex align-items-center">
+                @if (swotType === 'strengths') {
+                    <input type="text" id="{{item.id}}-strengths" [value]="item.strengths" placeholder="Adicione uma descrição" 
+                        class="me-3 ms-1 col" #textStrengths >
+                }
+                @else if (swotType === 'weaknesses') {
+                    <input type="text" id="{{item.id}}-weaknesses" [value]="item.weaknesses" placeholder="Adicione uma descrição" 
+                        class="me-3 ms-1 col" #textWeaknesses >
+                }
+                @else if (swotType === 'opportunities') {
+                    <input type="text" id="{{item.id}}-opportunities" [value]="item.opportunities" placeholder="Adicione uma descrição" 
+                        class="me-3 ms-1 col" #textOpportunities >
+                }
+                @else if (swotType === 'threats') {
+                    <input type="text" id="{{item.id}}-threats" [value]="item.threats" placeholder="Adicione uma descrição" 
+                        class="me-3 ms-1 col" #textThreats >
+                }
+
+                <button class="btn btn-outline-red btn-sm rounded-circle" title="Remover item"
+                    (click)="deleteItem(item.id, swotType)">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </label>
+        </div>
+    }
+}
+@else {
+    <p class="text-white">Nenhum item inserido</p>
+}

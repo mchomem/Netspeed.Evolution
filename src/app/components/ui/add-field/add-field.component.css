@@ -1,0 +1,43 @@
+:host {
+    input[type="text"] {
+        outline: none;
+        border: none;
+        border-radius: 0;
+        box-shadow: none !important;
+        background-color: transparent;
+        color: var(--ns-navy);
+    }
+    input[type="text"]::placeholder {
+        color: #01384ebd;
+    }
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0) inset !important;
+        -webkit-text-fill-color: var(--ns-navy);
+        transition: 0s;
+    }
+
+    .label-text-input {
+        width: 100%;
+    }
+
+    .input-area {
+        background-color: #ffffff8a;
+        padding: .5rem .5rem .5rem 1rem;
+        transition: .3s;
+    }
+    .input-area:focus-within {
+        background-color: #ffffffbb;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .btn-outline-primary-navy {
+        border: 2px solid var(--ns-navy);
+        color: var(--ns-navy);
+        transition: .3s;
+    }
+        .btn-outline-primary-navy:hover {
+            background-color: var(--ns-navy);
+            color: white;
+        }
+    
+}
