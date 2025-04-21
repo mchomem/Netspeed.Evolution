@@ -10,6 +10,14 @@ body {
     color: var(--dark);
 }
 
+.clickable-row {
+    cursor: pointer;
+}
+
+.evolution-bg-primary {
+    background-color: aliceblue !important;
+}
+
 :root {
     --primary-blue: #0085d3;
     --secondary-blue: #255c99;

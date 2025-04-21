@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Task } from '../../models/task.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,20 +8,23 @@ import { Task } from '../../models/task.model';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit {
-  
-  tasks: Task[] = [];
+export class HomeComponent {
+  #tasks: Task[] = [
+    new Task(1, 'Preencher formulário SWOT', 'Pendente','swot'),
+    new Task(2, 'Preencher Plano de Ação 5W2H', 'Pendente','5w2h')
+  ];
+  #router = inject(Router);
 
-  constructor() {}
-  
-  ngOnInit() {
-    this.getTasksMock();
+  public getTasks() {
+    return this.#tasks;
   }
 
-  getTasksMock(){
-    this.tasks = [
-      { id: 1, name: 'Preencher formulário SWOT', state: 'Pendente' },
-      { id: 2, name: 'Preencher Plano de Ação 5W2H', state: 'Pendente' },
-    ];
+  public openTask(type: string) {
+    if (type === 'swot') {
+      this.#router.navigate(["/swot"]);
+    }
+    else {
+      this.#router.navigate(["/action-plan"]);
+    }
   }
 }
