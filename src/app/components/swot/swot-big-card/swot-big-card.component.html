@@ -5,18 +5,20 @@
                 <div class="mb-4">
                     <h3 class="text-white">Forças</h3>
                 </div>
-                <app-add-field />
+                <app-add-field (outputAdd)="addItem($event, SwotItemType.strengths)" />
                 <div class="mt-4">
-                    <app-swot-item [inputSwotItens]="getSwotItens('strengths')" [swotType]="'strengths'"/>
+                    <app-swot-item [inputSwotItens]="getSwotItens('strengths')" [swotType]="SwotItemType.strengths" 
+                        (outputDelete)="deleteItem($event.order, $event.type)" (outputUpdate)="updateItem($event.item, $event.type)"/>
                 </div>
             </div>
             <div class="align-itens-center justify-content-center p-5 py-4 opportunities col">
                 <div class="mb-4">
                     <h3 class="text-white">Oportunidades</h3>
                 </div>
-                <app-add-field />
+                <app-add-field (outputAdd)="addItem($event, SwotItemType.opportunities)" />
                 <div class="mt-4">
-                    <app-swot-item [inputSwotItens]="getSwotItens('opportunities')" [swotType]="'opportunities'"/>
+                    <app-swot-item [inputSwotItens]="getSwotItens('opportunities')" [swotType]="SwotItemType.opportunities" 
+                        (outputDelete)="deleteItem($event.order, $event.type)" (outputUpdate)="updateItem($event.item, $event.type)"/>
                 </div>
             </div>
         </div>
@@ -25,18 +27,20 @@
                 <div class="mb-4">
                     <h3 class="text-white">Fraquezas</h3>
                 </div>
-                <app-add-field />
+                <app-add-field (outputAdd)="addItem($event, SwotItemType.weaknesses)" />
                 <div class="mt-4">
-                    <app-swot-item [inputSwotItens]="getSwotItens('weaknesses')" [swotType]="'weaknesses'"/>
+                    <app-swot-item [inputSwotItens]="getSwotItens('weaknesses')" [swotType]="SwotItemType.weaknesses" 
+                        (outputDelete)="deleteItem($event.order, $event.type)" (outputUpdate)="updateItem($event.item, $event.type)"/>
                 </div>
             </div>
             <div class="align-itens-center justify-content-center p-5 py-4 threats col">
                 <div class="mb-4">
                     <h3 class="text-white">Ameaças</h3>
                 </div>
-                <app-add-field />
+                <app-add-field (outputAdd)="addItem($event, SwotItemType.threats)" />
                 <div class="mt-4">
-                    <app-swot-item [inputSwotItens]="getSwotItens('threats')" [swotType]="'threats'"/>
+                    <app-swot-item [inputSwotItens]="getSwotItens('threats')" [swotType]="SwotItemType.threats" 
+                        (outputDelete)="deleteItem($event.order, $event.type)" (outputUpdate)="updateItem($event.item, $event.type)"/>
                 </div>
             </div>
         </div>

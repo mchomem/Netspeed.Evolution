@@ -2,5 +2,14 @@
     <div class="">
         <h3>Matriz SWOT</h3>
     </div>
-    <app-swot-big-card />
+    <app-swot-big-card [inputSwot]="getSwotData()" 
+        (outputDelete)="removeSwotItem($event.order, $event.type)"
+        (outputAdd)="addSwotItem($event.text, $event.type)"
+        (outputUpdate)="updateSwotItemText($event.item, $event.type)"/>
+
+    <div class="mt-4 text-end">
+        <button class="btn btn-primary px-5" (click)="sendSwotData()">
+            Enviar
+        </button>
+    </div>
 </div>
