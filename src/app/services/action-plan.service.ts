@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { APIResponse } from '../models/apiResponse.model';
-import { Swot } from '../models/swot.model';
+import { ActionPlan } from '../models/action-plan.model';
 
 @Injectable({
     providedIn: "root"
@@ -10,23 +10,23 @@ import { Swot } from '../models/swot.model';
 
 export class ActionPlanService {
 
-  #apiUrl = 'https://localhost:7011/api/Swot';
+  #apiUrl = 'https://localhost:7011/api/ActionPlain5W2H';
   
   constructor(private http: HttpClient) { }
 
-  public getActionsData(employeeId: number, cycle: number): Observable<APIResponse> {
+  public getActions(employeeId: number, cycle: number): Observable<APIResponse> {
       return this.http.get<APIResponse>(`${this.#apiUrl}?employeeId=${employeeId}&cycleId=${cycle}`);
   }
 
-  public postActionData(actionData: Swot): Observable<APIResponse> {
+  public postAction(actionData: ActionPlan): Observable<APIResponse> {
       return this.http.post<APIResponse>(`${this.#apiUrl}`, actionData);
   }
 
-  public putActionData(actionData: Swot): Observable<APIResponse> {
-      return this.http.put<APIResponse>(`${this.#apiUrl}?id=${actionData.id}`, actionData);
+  public putAction(actionData: ActionPlan): Observable<APIResponse> {
+      return this.http.put<APIResponse>(`${this.#apiUrl}/${actionData.id}`, actionData);
   }
 
-  public deleteAction(actionData: Swot): Observable<APIResponse> {
-      return this.http.put<APIResponse>(`${this.#apiUrl}?id=${actionData.id}`, actionData);
+  public deleteAction(actionData: ActionPlan): Observable<APIResponse> {
+      return this.http.delete<APIResponse>(`${this.#apiUrl}/${actionData.id}`);
   }
 }

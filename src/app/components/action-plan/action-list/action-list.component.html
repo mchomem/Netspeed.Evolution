@@ -1,0 +1,12 @@
+@if(inputActions && inputActions.length) {
+    @for (action of inputActions; track $index) {
+        <div class="card mb-3">
+            <div class="card-body">
+                <p class="m-0 text-start" [innerHTML]="action.what"></p>
+            </div>
+        </div>
+    }
+}
+@else {
+    <p>Nenhuma ação cadastrada</p>
+}
