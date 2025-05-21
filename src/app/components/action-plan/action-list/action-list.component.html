@@ -1,12 +1,35 @@
-@if(inputActions && inputActions.length) {
-    @for (action of inputActions; track $index) {
-        <div class="card mb-3">
-            <div class="card-body">
-                <p class="m-0 text-start" [innerHTML]="action.what"></p>
+
+<div class="accordion" id="accordionFlushExample">
+    @if(inputActions && inputActions.length) {
+        @for (action of inputActions; track $index) {
+            <div class="accordion-item rounded-3 border-0 border-3 border-info border-start mb-3 shadow-sm">
+                <h2 class="accordion-header bg-transparent" [id]="'flush-heading-' + action.id">
+                    <button class="accordion-button bg-white rounded-3 text-dark fs-5" type="button" data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#flush-collapse' + action.id" aria-expanded="false" 
+                        [attr.aria-controls]="'flush-collapse' + action.id" [innerHTML]="action.what">
+                    </button>
+                </h2>
+                <div [id]="'flush-collapse' + action.id" class="accordion-collapse collapse" [attr.aria-labelledby]="'flush-heading' + action.id"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body text-start">
+                        <p class="mb-2" [innerHTML]="'<b>Por quê? </b>' + action.why"></p>
+                        <p class="mb-2" [innerHTML]="'<b>Onde? </b>' + action.where"></p>
+                        <p class="mb-2" [innerHTML]="'<b>Quando? </b>' + action.when"></p>
+                        <p class="mb-2" [innerHTML]="'<b>Quem? </b>' + action.who"></p>
+                        <p class="mb-2" [innerHTML]="'<b>Como? </b>' + action.how"></p>
+                        <p class="mb-2" [innerHTML]="'<b>Quanto custa? </b>' + action.howMuch"></p>
+                    </div>
+                </div>
             </div>
-        </div>
+        }
     }
-}
-@else {
-    <p>Nenhuma ação cadastrada</p>
-}
+    @else {
+        <p class="my-4">Nenhuma ação cadastrada</p>
+    }
+</div>
+
+<div class="card mb-3 shadow-sm rounded-3 border-0">
+    <button class="card-body btn rounded-3 text-start text-dark-emphasis" title="Clique para criar uma nova ação">
+        <i class="fa-solid fa-plus"></i> Adicione uma nova ação
+    </button>
+</div>

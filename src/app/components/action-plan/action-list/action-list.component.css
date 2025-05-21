@@ -1,0 +1,10 @@
+:host {
+    .accordion-button {
+        box-shadow: none !important;
+    }
+    .accordion-button:focus {
+        z-index: 3;
+        outline: none;
+        box-shadow: none;
+    }
+}

@@ -16,7 +16,7 @@
                 <tbody>
                     @if (getTasks().length) {
                         @for(task of getTasks(); track task.id) {
-                            <tr class="clickable-row border-bottom border-dark-subtle" (click)="openTask(task.type)">
+                            <tr class="clickable-row border-bottom border-dark-subtle" title="Clique para abrir a tarefa" (click)="openTask(task.type)">
                                 <td class="px-md-3 custom-py-3 evolution-bg-primary">{{task.name}}</td>
                                 <td class="px-md-3 custom-py-3 evolution-bg-primary">{{task.state}}</td>
                             </tr>

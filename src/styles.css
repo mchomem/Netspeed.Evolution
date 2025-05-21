@@ -18,6 +18,16 @@ body {
     background-color: aliceblue !important;
 }
 
+.btn-primary-blue {
+    background-color: var(--primary-blue);
+    color: white;
+    transition: 0.3s;
+}
+    .btn-primary-blue:hover {
+        background-color: var(--secondary-blue);
+        color: white;
+    }
+
 :root {
     --primary-blue: #0085d3;
     --secondary-blue: #255c99;
