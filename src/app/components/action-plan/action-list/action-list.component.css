@@ -7,4 +7,29 @@
         outline: none;
         box-shadow: none;
     }
+
+    .accordion-body {
+        position: relative;
+    }
+
+    .trash-icon {
+        position: absolute;
+        background: white;
+        border: 2px solid var(--ns-red);
+        color: var(--ns-red);
+        border-radius: 50%;
+        font-size: 1.4rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        align-content: center;
+        right: 1rem;
+        bottom: 1rem;
+        text-align: center;
+        transition: .3s ease;
+        z-index: 5;
+    }
+    .trash-icon:hover {
+        background: var(--ns-red);
+        color: white;
+    }
 }

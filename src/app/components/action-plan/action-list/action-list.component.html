@@ -18,6 +18,9 @@
                         <p class="mb-2" [innerHTML]="'<b>Quem? </b>' + action.who"></p>
                         <p class="mb-2" [innerHTML]="'<b>Como? </b>' + action.how"></p>
                         <p class="mb-2" [innerHTML]="'<b>Quanto custa? </b>' + action.howMuch"></p>
+                        <button class="trash-icon" (click)="deleteAction(action.id)">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
                     </div>
                 </div>
             </div>

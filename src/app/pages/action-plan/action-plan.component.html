@@ -12,10 +12,10 @@
         </div>
     }
     @else {
-        <app-action-list [inputActions]="getActionsList()" (outputGoToForm)="setGoToForm($event)" />
+        <app-action-list [inputActions]="getActionsList()" (outputGoToForm)="setGoToForm($event)" (outputDeleteAction)="deleteAction($event)" />
 
         <div class="mt-4 text-end">
-            <button class="btn btn-primary-blue px-5 rounded-3">
+            <button class="btn btn-primary-blue px-5 rounded-3" (click)="sendActionPlan()">
                 Enviar
             </button>
         </div>

@@ -18,4 +18,9 @@ export class ActionListComponent {
     public goToForm (openForm: boolean) {
         return this.outputGoToForm.emit(openForm);
     }
+
+    @Output() public outputDeleteAction = new EventEmitter<number>();
+    public deleteAction (actionId: number) {
+        return this.outputDeleteAction.emit(actionId);
+    }
 }

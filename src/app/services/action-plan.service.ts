@@ -26,7 +26,7 @@ export class ActionPlanService {
       return this.http.put<APIResponse>(`${this.#apiUrl}/${actionData.id}`, actionData);
   }
 
-  public deleteAction(actionData: ActionPlan): Observable<APIResponse> {
-      return this.http.delete<APIResponse>(`${this.#apiUrl}/${actionData.id}`);
+  public deleteAction(actionId: number): Observable<APIResponse> {
+      return this.http.delete<APIResponse>(`${this.#apiUrl}/${actionId}`);
   }
 }

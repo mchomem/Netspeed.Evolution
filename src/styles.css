@@ -18,6 +18,40 @@ body {
     background-color: aliceblue !important;
 }
 
+/*
+    SWAL Styles
+*/
+.swal2-popup {
+    background-color: white;
+    color: var(--dark);
+    border-radius: .75rem;
+}
+
+button.swal2-confirm {
+    background-color: var(--primary-blue);
+    color: white;
+    border-radius: .5rem;
+    transition: .3s;
+}
+    button.swal2-confirm:hover {
+        background-color: var(--secondary-blue);
+    }
+button.swal2-cancel {
+    background-color: var(--primary-gray);
+    color: var(--dark);;
+    border-radius: .5rem;
+    transition: .3s;
+}
+    button.swal2-cancel:hover {
+        background-color: var(--secondary-gray);
+        color: white;
+    }
+.swal2-icon.swal2-warning {
+    border-color: var(--primary-light);
+    color: var(--primary-light);
+}
+
+
 .btn-primary-blue {
     background-color: var(--primary-blue);
     color: white;
