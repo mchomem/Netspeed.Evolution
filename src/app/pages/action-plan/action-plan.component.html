@@ -1,13 +1,23 @@
 <div class="container text-center mt-5">
-    <div class="mb-4">
+    <div class="mb-5">
         <h3>Plano de Ação 5W2H</h3>
     </div>
 
-    <app-action-list [inputActions]="getActions()" />
+    @if (isFormPage()) {
+        <app-action-form (outputSaveAction)="saveActionData($event)"/>
+        <div class="mt-4 text-start">
+            <button class="btn btn-primary-gray px-5 rounded-3" (click)="setGoToForm(false)">
+                Sair sem salvar
+            </button>
+        </div>
+    }
+    @else {
+        <app-action-list [inputActions]="getActionsList()" (outputGoToForm)="setGoToForm($event)" />
 
-    <div class="mt-4 text-end">
-        <button class="btn btn-primary-blue px-5 rounded-3">
-            Enviar
-        </button>
-    </div>
+        <div class="mt-4 text-end">
+            <button class="btn btn-primary-blue px-5 rounded-3">
+                Enviar
+            </button>
+        </div>
+    }
 </div>

@@ -28,10 +28,22 @@ body {
         color: white;
     }
 
+.btn-primary-gray {
+    background-color: var(--primary-gray);
+    color: var(--dark);
+    transition: 0.3s;
+}
+    .btn-primary-gray:hover {
+        background-color: var(--secondary-gray);
+        color: white;
+    }
+
 :root {
     --primary-blue: #0085d3;
     --secondary-blue: #255c99;
     --light-blue: #7EA3CC;
+    --primary-gray: #aab7c1;
+    --secondary-gray: #5d6e7a;
     --primary-dark-blue: #264160;
     --dark: #262626;
 

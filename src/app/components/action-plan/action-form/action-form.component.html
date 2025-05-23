@@ -1,1 +1,71 @@
-<p>action-form works!</p>
+<div class="card w-100 border-0 shadow-sm">
+    <div class="card-body">
+        <h4 class="card-title mb-4">Nova ação</h4>
+        <form id="wizardForm">
+            <div id="steps">
+                <h3></h3>
+                <section>
+                    <div class="mb-3">
+                        <label for="what" class="form-label fs-5">O que precisa ser feito?</label>
+                        <input type="text" class="form-control mb-2 text-center" id="what" name="what" maxlength="50" required
+                            placeholder="Descreva a ação, tarefa ou atividade que será realizada" autofocus>
+                    </div>
+                </section>
+
+                <h3></h3>
+                <section>
+                    <div class="mb-3">
+                        <label for="why" class="form-label fs-5">Por que essa ação é necessária?</label>
+                        <input type="text" class="form-control mb-2 text-center" id="why" name="why" maxlength="50" required
+                            placeholder="Explique o motivo, a importância ou o objetivo por trás dessa ação">
+                    </div>
+                </section>
+
+                <h3></h3>
+                <section>
+                    <div class="mb-3">
+                        <label for="where" class="form-label fs-5">Onde isso será feito?</label>
+                        <input type="text" class="form-control mb-2 text-center" id="where" name="where" maxlength="50" required
+                            placeholder="Informe o local físico ou virtual onde a atividade acontecerá">
+                    </div>
+                </section>
+
+                <h3></h3>
+                <section>
+                    <div class="mb-3">
+                        <label for="when" class="form-label fs-5">Quando isso deve ser feito?</label>
+                        <input type="text" class="form-control mb-2 text-center" id="when" name="when" maxlength="50" required
+                            placeholder="Especifique uma data, prazo, ou estimativa para a realização desta ação">
+                    </div>
+                </section>
+
+                <h3></h3>
+                <section>
+                    <div class="mb-3">
+                        <label for="who" class="form-label fs-5">Quem será responsável por essa ação?</label>
+                        <input type="text" class="form-control mb-2 text-center" id="who" name="who" maxlength="50" required
+                            placeholder="Indique as pessoas envolvidas nessta ação">
+                    </div>
+                </section>
+
+                <h3></h3>
+                <section>
+                    <div class="mb-3">
+                        <label for="how" class="form-label fs-5">Como essa ação será realizada?</label>
+                        <textarea class="form-control border-0 mb-2 text-center" id="how" name="how" maxlength="200" required
+                            placeholder="Descreva o método ou os recursos que serão utilizados" rows="2" style="resize: none;"></textarea>
+                    </div>
+                </section>
+
+                <h3></h3>
+                <section>
+                    <div class="mb-3">
+                        <label for="howMuch" class="form-label fs-5">Quanto vai custar para realizar essa ação?</label>
+                        <input type="text" class="form-control mb-2 text-center" id="howMuch" maxlength="50" name="howMuch" required
+                            placeholder="Informe os custos envolvidos: financeiros, de tempo ou recursos">
+                    </div>
+                </section>
+            </div>
+        </form>
+    </div>
+</div>

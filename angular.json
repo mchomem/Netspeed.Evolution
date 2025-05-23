@@ -29,9 +29,15 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "src/lib/jquery.steps.css",
               "src/styles.css"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery-validation/dist/jquery.validate.min.js",
+              "node_modules/jquery-validation/dist/localization/messages_pt_BR.min.js",
+              "node_modules/jquery-validation/dist/additional-methods.min.js",
+              "src/lib/jquery.steps.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           },

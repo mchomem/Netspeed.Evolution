@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActionPlan } from '../../../models/action-plan.model';
 
 @Component({
@@ -12,5 +12,10 @@ export class ActionListComponent {
 
     public getActions(): Array<ActionPlan> {
         return this.inputActions;
+    }
+
+    @Output() public outputGoToForm = new EventEmitter<boolean>();
+    public goToForm (openForm: boolean) {
+        return this.outputGoToForm.emit(openForm);
     }
 }
