@@ -1,18 +1,30 @@
-@if (inputSwotItens && inputSwotItens.length) {
-    @for (item of inputSwotItens; track item) {
-        <div class="item-area rounded-pill col mb-2">
-            <label [for]="item.id" class="label-text-input d-flex align-items-center">
-                    <input type="text" id="{{item.id}}-{{swotType}}" [value]="item.description" placeholder="Adicione uma descrição" 
-                        class="me-3 ms-1 col" #textInput (blur)="updateItem(item.order ?? 0, textInput.value, swotType)"
-                        (keydown.enter)="updateItem(item.order ?? 0, textInput.value, swotType)">
-                <button class="btn btn-outline-red btn-sm rounded-circle" title="Remover item"
-                    (click)="deleteItem(item.order ?? 0, swotType)">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </label>
-        </div>
+@defer (when inputSwotItens != null) {
+    @if (inputSwotItens.length) {
+        @for (item of inputSwotItens; track item) {
+            <div class="item-area rounded-pill col mb-2">
+                <label [for]="item.id" class="label-text-input d-flex align-items-center">
+                        <input type="text" id="{{item.id}}-{{swotType}}" [value]="item.description" placeholder="Adicione uma descrição" 
+                            class="me-3 ms-1 col" #textInput (blur)="updateItem(item.order ?? 0, textInput.value, swotType)"
+                            (keydown.enter)="updateItem(item.order ?? 0, textInput.value, swotType)">
+                    <button class="btn btn-outline-red btn-sm rounded-circle" title="Remover item"
+                        (click)="deleteItem(item.order ?? 0, swotType)">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </label>
+            </div>
+        }
+    }
+    @else {
+        <p class="text-white">Nenhum item inserido</p>
     }
 }
-@else {
-    <p class="text-white">Nenhum item inserido</p>
+@placeholder {
+    <p class="placeholder-glow">
+        <span class="placeholder fs-1 rounded-pill col-12"></span>
+    </p>
+}
+@defer (on timer(15s)) {
+    @if (!inputSwotItens) {
+        <p class="text-white"><i class="fa-solid fa-triangle-exclamation"></i> Houve uma falha ao carregar os dados</p>
+    }
 }

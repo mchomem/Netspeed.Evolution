@@ -27,6 +27,9 @@ export class SwotComponent implements OnInit {
         this.#swotData = data.data as Swot;
         this.#swotSignal.set(this.#swotData);
       }
+      else {
+        
+      }
     });
   }
 
