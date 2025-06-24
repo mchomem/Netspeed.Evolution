@@ -59,6 +59,20 @@ export class ActionPlanComponent implements OnInit {
         });
     }
 
+    public updateActionData(action: ActionPlan): void {
+        action.cycleId = this.#cycle;
+        action.employeeId = this.#eployeeId;
+        action.observation = '';
+        action.improvementPoint = '';
+
+        this.#actionPlanService.putAction(action).subscribe(data => {
+            if (data.success) {
+                this.getActionPlanData();
+                this.setGoToForm(false);
+            }
+        });
+    }
+
     public setGoToForm(openForm: boolean) {
         this.isFormPage.set(openForm);
     }

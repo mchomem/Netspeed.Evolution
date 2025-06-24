@@ -4,14 +4,16 @@
         @for (action of inputActions; track $index) {
             <div class="accordion-item rounded-3 border-0 border-3 border-info border-start mb-3 shadow-sm">
                 <h2 class="accordion-header bg-transparent" [id]="'flush-heading-' + action.id">
-                    <button class="accordion-button bg-white rounded-3 text-dark fs-5" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button bg-white rounded-3 text-dark" type="button" data-bs-toggle="collapse"
                         [attr.data-bs-target]="'#flush-collapse' + action.id" aria-expanded="false" 
-                        [attr.aria-controls]="'flush-collapse' + action.id" [innerHTML]="action.what">
+                        [attr.aria-controls]="'flush-collapse' + action.id">
+                        <input type="text" class="form-control fs-5 p-0 col-md-6 w-50 discret-input px-1" [value]="action.what"
+                            maxlength="50" [id]="'what-' + action.id" (blur)="editAction(action.id)" (keydown.enter)="forceBlur($event)">
                     </button>
                 </h2>
                 <div [id]="'flush-collapse' + action.id" class="accordion-collapse collapse" [attr.aria-labelledby]="'flush-heading' + action.id"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body text-start">
+                    <div class="accordion-body text-start px-5">
                         <p class="mb-2" [innerHTML]="'<b>Por quê? </b>' + action.why"></p>
                         <p class="mb-2" [innerHTML]="'<b>Onde? </b>' + action.where"></p>
                         <p class="mb-2" [innerHTML]="'<b>Quando? </b>' + action.when"></p>

@@ -51,6 +51,17 @@ button.swal2-cancel {
     color: var(--primary-light);
 }
 
+/*
+    INPUT CUSTOM
+*/
+.discret-input {
+    border: 1px solid white;
+    transition: .3s;
+}
+    .discret-input:hover {
+        border: 1px solid #dee2e6;
+    }
+
 
 .btn-primary-blue {
     background-color: var(--primary-blue);
