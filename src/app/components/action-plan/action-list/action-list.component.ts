@@ -9,9 +9,9 @@ import { FormsModule } from '@angular/forms';
     styleUrl: './action-list.component.css'
 })
 export class ActionListComponent {
-    @Input() public inputActions: Array<ActionPlan> = [];
+    @Input() public inputActions: Array<ActionPlan> | null = null;
 
-    public getActions(): Array<ActionPlan> {
+    public getActions(): Array<ActionPlan> | null {
         return this.inputActions;
     }
 
@@ -29,7 +29,7 @@ export class ActionListComponent {
     public editAction (actionId: number) {
         var whatEdited = $('#what-' + actionId).val()?.toString();
         if (whatEdited) {
-            var action = this.inputActions.find(a => a.id === actionId);
+            var action = this.inputActions?.find(a => a.id === actionId);
             if (action) {
                 action.what = whatEdited;
             }

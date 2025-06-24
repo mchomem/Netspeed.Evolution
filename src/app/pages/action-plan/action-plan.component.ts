@@ -24,15 +24,15 @@ export class ActionPlanComponent implements OnInit {
     #actionPlanService: ActionPlanService;
     #eployeeId: number = 1;
     #cycle: number = 1;
-    #actionPlanData: Array<ActionPlan> = [];
+    #actionPlanData: Array<ActionPlan> | null = null;
 
-    #actionPlanSignal = signal<Array<ActionPlan>>(this.#actionPlanData);
+    #actionPlanSignal = signal<Array<ActionPlan> | null>(this.#actionPlanData);
 
     ngOnInit(): void {
         this.getActionPlanData();
     }
 
-    public getActionsList(): Array<ActionPlan> {
+    public getActionsList(): Array<ActionPlan> | null {
         return this.#actionPlanSignal();
     }
 
