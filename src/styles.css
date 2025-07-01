@@ -72,6 +72,11 @@ button.swal2-cancel {
         background-color: var(--secondary-blue);
         color: white;
     }
+    .btn-primary-blue:active {
+        background-color: var(--secondary-blue) !important;
+        color: white !important;
+    }
+
 
 .btn-primary-gray {
     background-color: var(--primary-gray);
@@ -81,6 +86,10 @@ button.swal2-cancel {
     .btn-primary-gray:hover {
         background-color: var(--secondary-gray);
         color: white;
+    }
+    .btn-primary-gray:active {
+        background-color: var(--secondary-gray) !important;
+        color: white !important;
     }
 
 :root {

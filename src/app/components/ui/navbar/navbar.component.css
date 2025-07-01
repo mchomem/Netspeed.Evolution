@@ -1,3 +1,12 @@
 .navbar {
     background-image: linear-gradient(315deg, var(--secondary-blue),var(--primary-blue)) ;
 }
+
+.logout-link {
+    color: #ffffff8c;
+    text-decoration: none;
+    transition: .3s;
+}
+.logout-link:hover {
+    color: #ffffffbf;
+}

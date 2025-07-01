@@ -6,6 +6,7 @@ import { ActionPlanComponent } from './pages/action-plan/action-plan.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { GuestLayoutComponent } from './layouts/guest-layout/guest-layout.component';
+import { ProfileComponent } from './components/user/profile/profile.component';
 
 export const routes: Routes = [
     { 
@@ -15,6 +16,13 @@ export const routes: Routes = [
             { path: '', component: HomeComponent },
             { path: 'swot', component: SwotComponent },
             { path: 'action-plan', component: ActionPlanComponent }
+        ]
+    },
+    { 
+        path: 'user', 
+        component: MainLayoutComponent,
+        children: [
+            { path: 'profile', component: ProfileComponent }
         ]
     },
     { 
