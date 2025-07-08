@@ -15,10 +15,24 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/user/profile">Perfil</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/skils">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/adm">ADM</a>
+                </li>
             </ul>
         </div>
+        <div class="me-5 fs-4 text-light-link clickable-row">
+            @if (hasNotifications()) {
+                <i class="fa-solid fa-bell"></i>
+            }
+            @else {
+                <i class="fa-regular fa-bell"></i>
+            }
+        </div>
         <div class="">
-            <a class="logout-link" href="/auth/login">Sair</a>
+            <a class="text-light-link" href="/auth/login">Sair</a>
         </div>
     </div>
 </nav>

@@ -7,10 +7,13 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { GuestLayoutComponent } from './layouts/guest-layout/guest-layout.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
+import { AdmComponent } from './pages/adm/adm.component';
+import { SkilsComponent } from './pages/skils/skils.component';
+import { ForgotPasswordComponent } from './pages/auth/forgot-password/forgot-password.component';
 
 export const routes: Routes = [
     { 
-        path: '', 
+        path: '',
         component: MainLayoutComponent,
         children: [
             { path: '', component: HomeComponent },
@@ -18,19 +21,34 @@ export const routes: Routes = [
             { path: 'action-plan', component: ActionPlanComponent }
         ]
     },
-    { 
-        path: 'user', 
+    {
+        path: 'user',
         component: MainLayoutComponent,
         children: [
             { path: 'profile', component: ProfileComponent }
         ]
     },
-    { 
-        path: 'auth', 
+    {
+        path: 'adm',
+        component: MainLayoutComponent,
+        children: [
+            { path: '', component: AdmComponent }
+        ]
+    },
+    {
+        path: 'skils',
+        component: MainLayoutComponent,
+        children: [
+            { path: '', component: SkilsComponent }
+        ]
+    },
+    {
+        path: 'auth',
         component: GuestLayoutComponent,
         children: [
             { path: 'login', component: LoginComponent },
-            { path: 'register', component: RegisterComponent }
+            { path: 'register', component: RegisterComponent },
+            { path: 'forgot', component: ForgotPasswordComponent },
         ]
     }
 ];

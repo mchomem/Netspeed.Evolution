@@ -7,4 +7,9 @@ import { Component, Input } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  @Input() public hasNotification: boolean = true;
+
+  public hasNotifications() : boolean {
+    return this.hasNotification;
+  }
 }

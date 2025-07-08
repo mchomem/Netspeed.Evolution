@@ -6,7 +6,7 @@
 
     <div class="row">
         <div class="col">
-            <table class="table table-hover mb-5">
+            <table class="table table-hover table-striped mb-5">
                 <thead class="table-dark">
                     <tr>
                         <th class="rounded-start-1 border-0 px-md-3 custom-py-3" style="width: 80%;">Tarefa</th>
@@ -16,9 +16,9 @@
                 <tbody>
                     @if (getTasks().length) {
                         @for(task of getTasks(); track task.id) {
-                            <tr class="clickable-row border-bottom border-dark-subtle" title="Clique para abrir a tarefa" (click)="openTask(task.type)">
-                                <td class="px-md-3 custom-py-3 evolution-bg-primary">{{task.name}}</td>
-                                <td class="px-md-3 custom-py-3 evolution-bg-primary">{{task.state}}</td>
+                            <tr class="clickable-row border-light" title="Clique para abrir a tarefa" (click)="openTask(task.type)">
+                                <td class="px-md-3 custom-py-3 evolution-bg-primary rounded-start-2">{{task.name}}</td>
+                                <td class="px-md-3 custom-py-3 evolution-bg-primary rounded-end-2">{{task.state}}</td>
                             </tr>
                         }
                     }
