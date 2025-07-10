@@ -1,12 +1,31 @@
-.navbar {
-    background-image: linear-gradient(315deg, var(--secondary-blue),var(--primary-blue)) ;
-}
-
-.text-light-link {
-    color: #ffffff8c;
-    text-decoration: none;
-    transition: .3s;
-}
-    .text-light-link:hover {
-        color: #ffffffbf;
+:host {
+    .navbar {
+        background-image: linear-gradient(315deg, var(--secondary-blue),var(--primary-blue)) ;
     }
+
+    .text-light-link {
+        color: var(--no-active-link-color);
+        text-decoration: none;
+        transition: .3s;
+    }
+        .text-light-link:hover {
+            color: var(--active-link-color);
+        }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .dropdown-menu {
+        background-color: var(--no-active-link-color);
+        border: none;
+    }
+
+    .dropdown-item {
+        background-color: var(--no-active-link-color);
+        transition: .1s;
+    }
+    .dropdown-item:hover {
+        background-color: var(--active-link-color);;
+    }
+}

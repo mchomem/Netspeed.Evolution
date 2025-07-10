@@ -103,6 +103,9 @@ button.swal2-cancel {
 
     --light-blue-bg: #dae5f0;
 
+    --active-link-color: #d9e8fa;
+    --no-active-link-color: #a6b9d3;
+
     --ns-blue: #0077B9;
     --ns-cyan: #59BFCB;
     --ns-green: #7DB62D;

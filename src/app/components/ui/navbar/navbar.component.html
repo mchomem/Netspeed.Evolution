@@ -23,12 +23,31 @@
                 </li>
             </ul>
         </div>
-        <div class="me-5 fs-4 text-light-link clickable-row">
+        <div class="me-5 clickable-row">
             @if (hasNotifications()) {
-                <i class="fa-solid fa-bell"></i>
+                <div class="nav-item dropdown">
+                    <a class="btn btn-link fs-4 text-light-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-bell"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end p-1">
+                        <li>
+                            <a class="dropdown-item rounded-1" href="#">Formulário SWOT recebido</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item rounded-1" href="#">Plano de Ação recebido</a>
+                        </li>
+                    </ul>
+                </div>
             }
             @else {
-                <i class="fa-regular fa-bell"></i>
+                <div class="nav-item dropdown">
+                    <a class="btn btn-link fs-4 text-light-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-regular fa-bell"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end p-1">
+                        <li class="text-center"><span class="small">Nenhuma notificação</span></li>
+                    </ul>
+                </div>
             }
         </div>
         <div class="">
