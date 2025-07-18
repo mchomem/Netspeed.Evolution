@@ -5,17 +5,17 @@
             Faça login
         </h1>
         <div class="form-floating mb-3"> 
-            <input type="email" class="form-control" id="floatingInput" placeholder="E-mail"> 
+            <input type="email" class="form-control" id="floatingInput" placeholder="E-mail" #userName> 
             <label for="floatingInput">E-mail</label> 
         </div>
         <div class="form-floating mb-2">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" #password>
             <label for="floatingPassword">Senha</label> 
         </div>
         <a class="text-decoration-none text-dark d-block fw-bold w-100 py-2 mb-4" href="/auth/forgot">
             Esqueci minha senha
         </a>
-        <button class="btn btn-primary-blue w-100 py-2 mb-3" type="submit">
+        <button class="btn btn-primary-blue w-100 py-2 mb-3" (click)="login(userName.value, password.value)">
             Entrar
         </button>
         <a class="btn btn-primary-gray fw-bold w-100 py-2" href="/auth/register">
